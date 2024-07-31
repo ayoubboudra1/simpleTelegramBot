@@ -52,7 +52,7 @@ function monitorTemplate() {
             console.log(err);
         }
 
-    }, 5000);
+    }, 10000);
 }
 
 // checkWebsite(url, 'h1');
