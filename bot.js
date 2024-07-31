@@ -88,7 +88,7 @@ async function monitorTemplate() {
 
 // checkWebsite(url, 'h1');
 
-monitorTemplate();
+
 
 
 const app = express();
@@ -96,6 +96,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
+  monitorTemplate();
 });
 
 app.listen(port, () => {
