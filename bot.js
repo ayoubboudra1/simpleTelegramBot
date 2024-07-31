@@ -3,11 +3,14 @@ const fs = require('fs');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const { count } = require('console');
+const express = require('express');
 
 const token  = '6665225787:AAHk7YHyQjHqORIdoEJ6WFDLzGRXNd0qTRI';
 const chatId = '1764251980';
 const url    = 'https://trouverunlogement.lescrous.fr/tools/36/search?bounds=5.2286902_43.3910329_5.5324758_43.1696205'
 // const url    = 'https://trouverunlogement.lescrous.fr/tools/36/search'
+
+
 
 
 const words = ["BALUSTRES", "CHATENOUD" ];
@@ -87,3 +90,14 @@ async function monitorTemplate() {
 
 monitorTemplate();
 
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
