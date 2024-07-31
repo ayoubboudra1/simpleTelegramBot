@@ -8,18 +8,8 @@ const express = require('express');
 const token  = '6665225787:AAHk7YHyQjHqORIdoEJ6WFDLzGRXNd0qTRI';
 const chatId = '1764251980';
 const url    = 'https://trouverunlogement.lescrous.fr/tools/36/search?bounds=5.2286902_43.3910329_5.5324758_43.1696205'
-// const url    = 'https://trouverunlogement.lescrous.fr/tools/36/search'
-
-
-
-
 const words = ["BALUSTRES", "CHATENOUD" ];
-
-const bot = new TelegramBot(token, { polling: true });
-
 var current_number = 0;
-
-
 var counter = 0;
 
 function sleep(ms) {
@@ -29,7 +19,7 @@ function sleep(ms) {
 async function monitorTemplate() {
     // let lastModifiedTime = fs.statSync(filePath).mtimeMs;
 
-
+        const bot = new TelegramBot(token, { polling: true });
     
         // setInterval(async () => {
         while(true){    
