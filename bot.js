@@ -24,7 +24,7 @@ async function monitorTemplate() {
         // setInterval(async () => {
         while(true){    
 
-            
+            bot.sendMessage(chatId, "I'm awake !");
             try{
                 const { data } = await axios.get(url);
                 const $ = cheerio.load(data);
