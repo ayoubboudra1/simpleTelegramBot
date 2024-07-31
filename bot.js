@@ -38,7 +38,7 @@ function monitorTemplate() {
 
             const containsWord = words.some(word => title.includes(word));
 
-            if(containsWord) {
+            if(!containsWord) {
                 numberOfMessage = 2
             }
             for(let i = 0; i < numberOfMessage; i++) {
